@@ -177,7 +177,6 @@ describe('GET /transactions', () => {
     const filteredByDate = transactionListMock.filter(
       ({ debitedAccount: { id }, createdAt }) => {
         const date = new Date(createdAt);
-        101;
         const from = new Date('09/01/2022');
         const to = new Date('11/01/2022');
         return date >= from && date <= to && id === mockUser.accountId;
