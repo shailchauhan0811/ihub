@@ -1,13 +1,9 @@
-FROM node:14
+FROM node:16.14-alpine
 
-WORKDIR /app
+WORKDIR /app-backend
 
-COPY package.json /app
-COPY package-lock.json /app
+COPY . .
 
 RUN npm install
 
-COPY . /app
-
-CMD ["node", "index.js"]
-
+CMD ["npm", "start"]
